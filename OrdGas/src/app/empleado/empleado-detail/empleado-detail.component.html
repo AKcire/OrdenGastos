@@ -1,0 +1,30 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Detalle Empleado</h4>
+      </div>
+      <div class="card-body">
+          <div class="card-body" *ngIf="empleado">
+              <div class="col-12">
+                  <label class="font-weight-bold">Nombre: </label>
+                  <input value="{{empleado.nombree}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Cargo: </label>
+                  <input value="{{empleado.cargoe}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Ruc: </label>
+                  <input value="{{empleado.ruce}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Email: </label>
+                  <input value="{{empleado.emaile}}" type="text" class="outlinenone" readonly>
+              </div>
+          </div>
+          <button (click)="list()" class="btn btn-primary">Regresar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="card">
+          <div class="card-header card-header-danger">
+              <h4 class="card-title">Ordenes De Gasto</h4>
+              <p class="card-category">Sistema para generar órdenes de pagos ESPE.</p>
+          </div>
+          <div class="tbl-header">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>Nombre Proveedor</th>
+                          <th>Ruc</th>
+                          <th>Email</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let proveedor of proveedores  | async">
+                          <td>{{proveedor.nombrep}}</td>
+                          <td>{{proveedor.rucp }}</td>
+                          <td>{{proveedor.emailp}}</td>
+                          <td>
+                              <img (click)="proveedorDetails(proveedor.id)" src="../../assets/img/detalle.png"
+                                  alt="new-img" height="25" width="25">
+                          </td>
+                          <td>
+                              <img (click)="proveedorEdit(proveedor.id)" src="../../assets/img/editar.png"
+                                  alt="new-img" height="25" width="25">
+                          </td>
+                          <td>
+                              <img (click)="deleteProveedor(proveedor.id)" src="../../assets/img/borrar.png"
+                                  alt="new-img" height="25" width="25">
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>

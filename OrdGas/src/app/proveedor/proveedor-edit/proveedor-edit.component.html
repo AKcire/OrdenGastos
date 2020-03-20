@@ -1,0 +1,38 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="card">
+          <div class="card-header card-header-danger">
+              <h4 class="card-title">Agregar Proveedor</h4>
+          </div>
+          <div class="card-body">
+              <form (ngSubmit)="onSubmit()">
+                  <div class="row">
+                      <div class="col-4">
+                          <label class="font-weight-bold">Nombre</label>
+                          <div>
+                              <input [(ngModel)]="proveedor.nombrep" type="text" placeholder="Ingrese el nombre"
+                                  id="nombrep"  name="nombrep" class="outlinenone"
+                                  required />
+                          </div>
+                      </div>
+                      <div class="col-4">
+                          <label class="font-weight-bold">Ruc</label>
+                          <div>
+                              <input [(ngModel)]="proveedor.rucp" type="number" placeholder="Ingrese el ruc" id="rucp"
+                                   name="rucp" class="outlinenone" required />
+                          </div>
+                      </div>
+                      <div class="col-4">
+                          <label class="font-weight-bold">Email</label>
+                          <div>
+                              <input [(ngModel)]="proveedor.emailp" type="email" placeholder="Ingrese el email"
+                                  id="emailp"  name="emailp" class="outlinenone" required />
+                          </div>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-success">Guardar</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

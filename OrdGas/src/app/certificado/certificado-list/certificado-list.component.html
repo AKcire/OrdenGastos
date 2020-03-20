@@ -1,0 +1,43 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Ordenes De Gasto</h4>
+        <p class="card-category">Sistema para generar órdenes de pagos ESPE.</p>
+      </div>
+      <div class="tbl-header">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Contrato</th>
+              <th>Cod Presupuesto</th>
+              <th>Descripcion Presupuesto</th>
+              <th>Valor de Presupuesto</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let certificado of certificados  | async">
+              <td>{{certificado.uzftcontrato_OBJETO_CONTRATA}}</td>
+              <td>{{certificado.uzftcertificate_CODIGO_PRESUP}}</td>
+              <td>{{certificado.uzftcertificate_DESCRIPCIONPRE }}</td>
+              <td>{{certificado.uzftcertificate_VALOR}}</td>
+              <td>
+                <img (click)="certificadoDetails(certificado.uzftcertificate_ID)" src="../../assets/img/detalle.png" alt="new-img"
+                  height="25" width="25">
+              </td>
+              <td>
+                <img (click)="certificadoEdit(certificado.uzftcertificate_ID)" src="../../assets/img/editar.png" alt="new-img"
+                  height="25" width="25">
+              </td>
+              <td>
+                <img (click)="deleteCertificado(certificado.uzftcertificate_ID)" src="../../assets/img/borrar.png" alt="new-img"
+                  height="25" width="25">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

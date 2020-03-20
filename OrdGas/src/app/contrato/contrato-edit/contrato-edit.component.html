@@ -1,0 +1,52 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Agregar Proveedor</h4>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-4">
+              <label class="font-weight-bold">Descripción</label>
+              <div>
+                <input [(ngModel)]="contrato.descripcion" type="text" placeholder="Ingrese descripción del contrato"
+                  id="descripcion" name="descripcion" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Item contratación</label>
+              <div>
+                <input [(ngModel)]="contrato.objeto_contratacion" type="text"
+                  placeholder="Ingrese el item de contratación" id="objeto_contratacion" name="objeto_contratacion"
+                  class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Número de contrato</label>
+              <div>
+                <input [(ngModel)]="contrato.numero_contrato" type="number" placeholder="Ingrese el numero de contrato"
+                  id="numero_contrato" name="numero_contrato" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-2">
+              <label class="font-weight-bold">Proveedor:</label>
+              <select [(ngModel)]="contrato.id_prov" name="id_prov" id="id_prov" class="form-control"
+                class="select-css">
+                <option *ngFor='let proveedor of proveedores' value={{proveedor.id}}>{{proveedor.nombrep}}</option>
+              </select>
+            </div>
+            <div class="col-2">
+              <label class="font-weight-bold">Administrador:</label>
+              <select [(ngModel)]="contrato.id_admin" name="id_admin" id="id_admin" class="form-control"
+                class="select-css">
+                <option *ngFor='let empleado of empleados' value={{empleado.id}}>{{empleado.nombree}}</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

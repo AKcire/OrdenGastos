@@ -1,0 +1,71 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Agregar certificado</h4>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-4">
+              <label class="font-weight-bold">Codigo del Presupuesto:</label>
+              <div>
+                <input [(ngModel)]="certificado.cod_presupuesto" type="number"
+                  placeholder="Ingrese el codigo del presupuesto" id="cod_presupuesto" name="cod_presupuesto"
+                  class="outlinenone" required /> -
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Descripción del presupuesto:</label>
+              <div>
+                <input [(ngModel)]="certificado.descripcion_presupuesto" type="text"
+                  placeholder="Ingrese la descripcion del presupuesto" id="descripcion_presupuesto"
+                  name="descripcion_presupuesto" class="outlinenone" required /> 
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Valor certificado:</label>
+              <div>
+                <input [(ngModel)]="certificado.valor_certificado" type="number"
+                  placeholder="Ingrese el valor del certificado" id="valor_certificado" name="valor_certificado"
+                  class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Gasto a efectuar:</label>
+              <div>
+                <input [(ngModel)]="certificado.gasto_afectuar" type="number" placeholder="Ingrese el Gasto a efectuar"
+                  id="gasto_afectuar" name="gasto_afectuar" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Otro valor de certificado:</label>
+              <div>
+                <input [(ngModel)]="certificado.otro_valor_certificado" type="number"
+                  placeholder="Ingrese el otro valor del certificado" id="otro_valor_certificado"
+                  name="otro_valor_certificado" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Otro gasto a efectuar</label>
+              <div>
+                <input [(ngModel)]="certificado.otro_gasto_afectuar" type="number"
+                  placeholder="Ingrese el otro gasto a efectuar" id="otro_gasto_afectuar" name="otro_gasto_afectuar"
+                  class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-2">
+              <label class="font-weight-bold">Contrato:</label>
+              <select [(ngModel)]="certificado.id_contrato" name="id_contrato" id="id_contrato" class="form-control"
+                class="select-css">
+                <option *ngFor='let contrato of contratos' value={{contrato.id}}>{{contrato.descripcion}}</option>
+              </select>
+            </div>
+
+          </div>
+          <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

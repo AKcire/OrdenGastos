@@ -1,0 +1,107 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Crear Orden de Gasto</h4>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-2">
+              <label class="font-weight-bold">Contrato:</label>
+              <select [(ngModel)]="ordenGasto.id_cotrato" name="id_cotrato" id="id_cotrato" class="form-control"
+                class="select-css">
+                <option *ngFor='let contrato of contratos' value={{contrato.id}}>{{contrato.descripcion}}</option>
+              </select>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Número de orden:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.num_orden" type="number" placeholder="Ingrese el número de orden"
+                  id="num_orden" name="num_orden" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Fecha:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.fecha" type="text" id="fecha" name="fecha" class="outlinenone"
+                  required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Mes:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.mes" type="text" id="mes" name="mes" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Instalación:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.instalacion" type="number"
+                  placeholder="Ingrese el valor de la instalación" id="instalacion" name="instalacion"
+                  class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Cantidad:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.cantidad" type="number" placeholder="Ingrese la cantidad" id="cantidad"
+                  name="cantidad" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Precio Unitario:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.precio_unita" type="number" placeholder="Ingrese el precio unitario"
+                  id="precio_unita" name="precio_unita" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Sub total:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.subtotal" type="number" id="subtotal" name="subtotal" class="outlinenone"
+                  required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Iva 12%:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.obtener_iva" type="number" id="iva" name="iva" class="outlinenone"
+                  required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Otro impuesto:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.obtener_otro_impuesto" type="number" id="otro_impuesto"
+                  name="otro_impuesto" class="outlinenone" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Total:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.total" type="number" id="total" name="total" class="outlinenone"
+                  required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Saldo:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.saldo" type="number" id="saldo" name="saldo" class="outlinenone"
+                  required />
+              </div>
+            </div>
+            <div class="col-4">
+              <label class="font-weight-bold">Dias Totales:</label>
+              <div>
+                <input [(ngModel)]="ordenGasto.total_dias" type="number" id="total_dias" name="total_dias"
+                  class="outlinenone" required />
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

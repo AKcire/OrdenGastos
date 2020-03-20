@@ -1,0 +1,53 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="card">
+          <div class="card-header card-header-danger">
+              <h4 class="card-title">Agregar Empleado</h4>
+          </div>
+          <div class="card-body">
+              <form (ngSubmit)="onSubmit()">
+                  <div class="row">
+                      <div class="col-4">
+                          <label class="font-weight-bold">Nombre</label>
+                          <div>
+                              <input [(ngModel)]="empleado.nombree" type="text" placeholder="Ingrese el nombre"
+                                  id="nombree"  name="nombree" class="outlinenone"
+                                  required />
+                              <!-- <span class="text-danger" *ngIf="editForm.controls['mesDia'].errors?.pattern">Mes o Dia
+                              invalido</span> -->
+                          </div>
+                      </div>
+                      <div class="col-4">
+                          <label class="font-weight-bold">Cargo</label>
+                          <div>
+                              <input [(ngModel)]="empleado.cargoe" type="text" placeholder="Ingrese el cargo"
+                                  id="cargoe"  name="cargoe" class="outlinenone" required />
+                              <!-- <span class="text-danger" *ngIf="editForm.controls['mesDia'].errors?.pattern">Mes o Dia
+                              invalido</span> -->
+                          </div>
+                      </div>
+                      <div class="col-4">
+                          <label class="font-weight-bold">Ruc</label>
+                          <div>
+                              <input [(ngModel)]="empleado.ruce" type="number" placeholder="Ingrese el ruc" id="ruce"
+                                   name="ruce" class="outlinenone" required />
+                              <!-- <span class="text-danger" *ngIf="editForm.controls['mesDia'].errors?.pattern">Mes o Dia
+                              invalido</span> -->
+                          </div>
+                      </div>
+                      <div class="col-4">
+                          <label class="font-weight-bold">Email</label>
+                          <div>
+                              <input [(ngModel)]="empleado.emaile" type="email" placeholder="Ingrese el email"
+                                  id="emaile"  name="emaile" class="outlinenone" required />
+                              <!-- <span class="text-danger" *ngIf="editForm.controls['mesDia'].errors?.pattern">Mes o Dia
+                                invalido</span> -->
+                          </div>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-success">Guardar</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

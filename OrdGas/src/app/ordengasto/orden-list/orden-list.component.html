@@ -1,0 +1,54 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="card">
+          <div class="card-header card-header-danger">
+              <h4 class="card-title">Ordenes De Gasto</h4>
+              <p class="card-category">Sistema para generar órdenes de pagos ESPE.</p>
+          </div>
+          <div class="tbl-header">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>Contrato</th>
+                          <th>Tipo de contrato</th>
+                          <th>Cantidad</th>
+                          <th>Precio u.</th>
+                          <th>iva</th>
+                          <th>otro impuesto</th>
+                          <th>subtotal</th>
+                          <th>total</th>
+                          <th>saldo</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let ordenGasto of ordenGastos  | async">
+                          <td>{{ordenGasto.id_cotrato}}</td>
+                          <td>{{ordenGasto.id_tipo }}</td>
+                          <td>{{ordenGasto.cantidad}}</td>
+                          <td>{{ordenGasto.precio_unitario}}</td>
+                          <td>{{ordenGasto.iva}}</td>
+                          <td>{{ordenGasto.otro_impuesto}}</td>
+                          <td>{{ordenGasto.subtotal }}</td>
+                          <td>{{ordenGasto.total}}</td>
+                          <td>{{ordenGasto.saldo}}</td>
+                          <td>
+                              <img (click)="ordenGastoDetails(ordenGasto.id)" src="../../assets/img/detalle.png"
+                                  alt="new-img" height="25" width="25">
+                          </td>
+                          <td>
+                              <img (click)="ordenGastoEdit(ordenGasto.id)" src="../../assets/img/editar.png"
+                                  alt="new-img" height="25" width="25">
+                          </td>
+                          <td>
+                              <img (click)="deleteOrdenGasto(ordenGasto.id)" src="../../assets/img/borrar.png"
+                                  alt="new-img" height="25" width="25">
+                          </td>
+                          <td>
+                            <img  (click)="pdf()" src="../../assets/img/imprimir.png" alt="new-img" height="25" width="25">
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>

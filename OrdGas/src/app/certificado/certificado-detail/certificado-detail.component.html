@@ -1,0 +1,42 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Detalle Certificado</h4>
+      </div>
+      <div class="card-body">
+          <div class="card-body" *ngIf="certificado">
+              <div class="col-12">
+                  <label class="font-weight-bold">Codigo del Presupuesto: </label>
+                  <input value="{{certificado.cod_presupuesto}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Descripción del presupuesto: </label>
+                  <input value="{{certificado.descripcion_presupuesto}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Valor certificado: </label>
+                  <input value="{{certificado.valor_certificado}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Gasto a efectuar: </label>
+                  <input value="{{certificado.gasto_afectuar}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Otro valor de certificado: </label>
+                  <input value="{{certificado.otro_valor_certificado}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Otro gasto a efectuar: </label>
+                  <input value="{{certificado.otro_gasto_afectuar}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Contrato: </label>
+                  <input value="{{certificado.id_contrato}}" type="text" class="outlinenone" readonly>
+              </div>
+          </div>
+          <button (click)="list()" class="btn btn-primary">Regresar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+        
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Detalle de Orden  de Gastos</h4>
+      </div>
+      <div class="card-body">
+          <div class="card-body" *ngIf="ordenGasto">
+              <div class="col-12">
+                  <label class="font-weight-bold">Contrato: </label>
+                  <input value="{{ordenGasto.id_cotrato}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Tipo de contrato: </label>
+                  <input value="{{ordenGasto.id_tipo}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">N° de orden: </label>
+                  <input value="{{ordenGasto.num_orden}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Fecha: </label>
+                  <input value="{{ordenGasto.fecha}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Mes: </label>
+                  <input value="{{ordenGasto.mes}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Instalacion: </label>
+                  <input value="{{ordenGasto.instalacion}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Cantidad: </label>
+                  <input value="{{ordenGasto.cantidad}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Precio Unitario: </label>
+                  <input value="{{ordenGasto.precio_unita}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Subtotal: </label>
+                  <input value="{{ordenGasto.subtotal}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Otro_impuesto: </label>
+                  <input value="{{ordenGasto.otro_impuesto}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Iva: </label>
+                  <input value="{{ordenGasto.iva}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Total: </label>
+                  <input value="{{ordenGasto.total}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Saldo: </label>
+                  <input value="{{ordenGasto.saldo}}" type="text" class="outlinenone" readonly>
+              </div>
+          </div>
+          <button (click)="pdf()" class="btn btn-primary">Imprimir</button>
+          <button (click)="list()" class="btn btn-primary">Regresar</button>
+      </div>
+    </div>
+  </div>
+</div>

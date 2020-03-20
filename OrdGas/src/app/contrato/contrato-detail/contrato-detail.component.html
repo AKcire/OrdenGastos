@@ -1,0 +1,34 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Detalle Contrato</h4>
+      </div>
+      <div class="card-body">
+          <div class="card-body" *ngIf="contrato">
+              <div class="col-12">
+                  <label class="font-weight-bold">Descripción: </label>
+                  <input value="{{contrato.descripcion}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Item contratación: </label>
+                  <input value="{{contrato.objeto_contratacion}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Número de contrato: </label>
+                  <input value="{{contrato.numero_contrato}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Proveedor: </label>
+                  <input value="{{contrato.id_prov}}" type="text" class="outlinenone" readonly>
+              </div>
+              <div class="col-4">
+                  <label class="font-weight-bold">Administrador: </label>
+                  <input value="{{contrato.id_admin}}" type="text" class="outlinenone" readonly>
+              </div>
+          </div>
+          <button (click)="list()" class="btn btn-primary">Regresar</button>
+      </div>
+    </div>
+  </div>
+</div>

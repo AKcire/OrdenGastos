@@ -1,0 +1,45 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Ordenes De Gasto</h4>
+        <p class="card-category">Sistema para generar órdenes de pagos ESPE.</p>
+      </div>
+      <div class="tbl-header">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Descripción</th>
+              <th>Item Contratacion</th>
+              <th>Numero de contrato</th>
+              <th>Proveedor</th>
+              <th>Administrador</th>
+              <th>Action</th>
+            </tr> 
+          </thead>
+          <tbody>
+            <tr *ngFor="let contrato of contratos  | async">
+              <td>{{contrato.uzftcontrato_DESCRIPCION}}</td>
+              <td>{{contrato.uzftcontrato_OBJETO_CONTRATA }}</td>
+              <td>{{contrato.uzftcontrato_NUMERO_CONTRATO}}</td>
+              <td>{{contrato.uzftprovider_NOMBRE}}</td>
+              <td>{{contrato.uzftemployee_NOMBRE}}</td>
+              <td>
+                <img (click)="contratoDetails(contrato.uzftcontrato_ID)" src="../../assets/img/detalle.png" alt="new-img"
+                  height="25" width="25">
+              </td>
+              <td>
+                <img (click)="contratoEdit(contrato.uzftcontrato_ID)" src="../../assets/img/editar.png" alt="new-img"
+                  height="25" width="25">
+              </td>
+              <td>
+                <img (click)="deleteContrato(contrato.uzftcontrato_ID)" src="../../assets/img/borrar.png" alt="new-img"
+                  height="25" width="25">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
